@@ -1,5 +1,5 @@
 ---
-name: copy some 4 files
+name: copy some 4 files and install ansible
 become: true
 hosts:
 task:
@@ -19,3 +19,7 @@ task:
     copy:
       src:
       dest:
+  - name: install apache
+    yum:
+      name: httpd
+      state: present
