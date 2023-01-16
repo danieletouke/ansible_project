@@ -1,0 +1,21 @@
+---
+name: copy some 4 files
+become: true
+hosts:
+task:
+  - name: copy the output.txt to all slaves
+    copy:
+      src:
+      dest:
+  - name: copy the file1.txt to all slaves
+    copy:
+      src:
+      dest:
+  - name: copy the file2.txt to all slaves
+    copy:
+      src:
+      dest:
+  - name: copy the file3.txt to all slaves
+    copy:
+      src:
+      dest:
