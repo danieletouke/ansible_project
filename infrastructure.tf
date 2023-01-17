@@ -30,11 +30,11 @@ sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_
 su - ansadmin
 
 #generate keypair for ssh
-ssh-keygen -t rsa -b 2048 -f ansible_key
+sudo ssh-keygen -t rsa -b 2048 -f ansible_key
 
-ssh-copy-id -i ansible_key.pub ansadmin@$${terraform output ansible_slave1}
+sudo ssh-copy-id -i ansible_key.pub ansadmin@$${terraform output ansible_slave1}
 
-ssh-copy-id -i ansible_key.pub ansadmin@$${terraform output ansible_slave2}
+sudo ssh-copy-id -i ansible_key.pub ansadmin@$${terraform output ansible_slave2}
 
 EOF
 }
