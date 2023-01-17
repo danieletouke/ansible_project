@@ -21,7 +21,7 @@ resource "aws_instance" "ansible-master" {
 yum update -y
 amazon-linux-extras install ansible2 -y
 
-#create ansible admin
+#create ansible admin 1
 useradd ansadmin
 echo "ansadmin:ansadmin" | sudo chpasswd
 
