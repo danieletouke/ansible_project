@@ -12,7 +12,7 @@ resource "aws_instance" "ansible-master" {
   security_groups = [aws_security_group.master_sg.name]
 
   root_block_device {
-    volume_size = "58"
+    volume_size = "59"
     volume_type = "gp3"
   }
   
